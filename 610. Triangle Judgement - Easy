@@ -1,0 +1,7 @@
+# To determine whether three line segments can form a triangle, we use the triangle inequality theorem
+SELECT x,y,z,
+    CASE 
+        WHEN x + y > z AND x + z > y AND y + z > x THEN "Yes"
+        ELSE "No"
+    END AS triangle
+FROM Triangle;
